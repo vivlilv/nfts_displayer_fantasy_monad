@@ -42,7 +42,9 @@ Make sure you have Five Server installed in VS Code.
 Go to the cards_viewer/ folder.
 
 Right-click on index.html and choose "Open with Five Server".
+
 ![Alt text](run_five_server.png)
+
 
 5. Interact With the Cards
 Use the filters in the viewer to explore different cards.

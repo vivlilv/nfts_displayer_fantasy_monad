@@ -1,0 +1,406 @@
+:root {
+    --bg-color: #121212;
+    --card-bg: #1e1e1e;
+    --text-color: #e0e0e0;
+    --accent-color: #bb86fc;
+    --border-color: #333;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    background-color: var(--bg-color);
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: var(--accent-color);
+    margin-bottom: 30px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+button,
+select {
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #2a2a2a;
+    border-color: var(--accent-color);
+}
+
+select {
+    min-width: 200px;
+}
+
+.stats {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.1em;
+    color: #aaa;
+}
+
+.stats span {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.nft-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 25px;
+    padding: 10px;
+}
+
+
+.nft-info {
+    padding: 15px;
+}
+
+.nft-info p {
+    margin: 8px 0;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+.nft-info p:first-child {
+    font-weight: 600;
+    color: var(--accent-color);
+    font-size: 1em;
+}
+
+.error {
+    color: #ff6b6b;
+    text-align: center;
+    padding: 20px;
+    background-color: #2a1a1a;
+    border-radius: 4px;
+    border: 1px solid #ff6b6b;
+}
+
+.no-results {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    font-size: 1.2em;
+    grid-column: 1 / -1;
+}
+
+/* Rarity colors - adjusted for dark theme */
+.rarity-1 {
+    border-left: 4px solid #ffd700;
+}
+
+/* legendary */
+.rarity-2 {
+    border-left: 4px solid #9b59b6;
+}
+
+/* epic */
+.rarity-3 {
+    border-left: 4px solid #3498db;
+}
+
+/* rare */
+.rarity-4 {
+    border-left: 4px solid #2ecc71;
+}
+
+
+.nft-card {
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: var(--card-bg);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    /* Ensure all cards have equal height */
+}
+
+.nft-image-container {
+    position: relative;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.nft-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: top;
+    /* Ensure image is aligned to top */
+    display: block;
+}
+
+.nft-info {
+    padding: 12px;
+    background-color: var(--card-bg);
+    border-top: 1px solid var(--border-color);
+}
+
+/* Position the stars and rarity in corners */
+.nft-meta {
+    position: absolute;
+    top: 8px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.nft-meta span {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.nft-meta .stars {
+    color: gold;
+}
+
+/* Updated meta positioning */
+.nft-info {
+    position: relative;
+    padding: 15px;
+    background-color: var(--card-bg);
+    border-top: 1px solid var(--border-color);
+    min-height: 90px;
+}
+
+.nft-meta {
+    position: absolute;
+    top: +72px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+
+.nft-meta span {
+    background-color: var(--bg-color);
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.nft-meta .stars {
+    color: gold;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.nft-meta .rarity {
+    color: var(--accent-color);
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Enhanced count badge */
+.count-badge {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: var(--accent-color);
+    color: black;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 16px;
+    border: 2px solid white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Improved text styling */
+.nft-name {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 1em;
+}
+
+.nft-handle {
+    color: #aaa;
+    font-size: 0.9em;
+    margin: 0;
+}
+
+
+.filter-controls {
+    background-color: #2a2a2a;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.filter-group h3 {
+    margin-top: 0;
+    color: var(--accent-color);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 8px;
+}
+
+.filter-row {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    gap: 10px;
+}
+
+.filter-row label {
+    min-width: 100px;
+    color: #ccc;
+}
+
+.filter-row input,
+.filter-row select {
+    flex: 1;
+    padding: 8px;
+    background-color: #1e1e1e;
+    border: 1px solid var(--border-color);
+    color: white;
+    border-radius: 4px;
+}
+
+.filter-row input[type="number"] {
+    max-width: 60px;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.filter-buttons button {
+    flex: 1;
+    padding: 8px;
+}
+
+#filteredCount {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.sort-toggle {
+    background-color: #333;
+    border: 1px solid #555;
+    margin-left: auto;
+    /* Pushes it to the right */
+}
+
+.sort-toggle.active {
+    background-color: var(--accent-color);
+    color: black;
+    font-weight: bold;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: #10171f;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 8px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: black;
+}
+
+.account-item {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+}
+
+.account-item:last-child {
+    border-bottom: none;
+}
+
+/* common */
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .nft-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .nft-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    }
+
+    .nft-image {
+        height: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .controls {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nft-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}

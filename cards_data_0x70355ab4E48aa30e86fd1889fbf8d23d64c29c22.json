@@ -1,0 +1,58 @@
+[
+    {
+        "id": "1683470631231275008",
+        "handle": "0xtequilaa",
+        "name": "Tequila (evm/acc)",
+        "stars": 6,
+        "rarity": 4,
+        "token_id": "11128323"
+    },
+    {
+        "id": "1473429303085916166",
+        "handle": "0xGrimjow",
+        "name": "Grimjow (evm/acc) \ud83d\udfe3",
+        "stars": 4,
+        "rarity": 4,
+        "token_id": "11128322"
+    },
+    {
+        "id": "786294900",
+        "handle": "boyhendryko",
+        "name": "Sapphire (evm/acc)",
+        "stars": 4,
+        "rarity": 4,
+        "token_id": "11128334"
+    },
+    {
+        "id": "1446957013444009991",
+        "handle": "NotChaseColeman",
+        "name": "Tiger",
+        "stars": 2,
+        "rarity": 4,
+        "token_id": "14732958"
+    },
+    {
+        "id": "4830383913",
+        "handle": "mikadontlouz",
+        "name": "Mika",
+        "stars": 3,
+        "rarity": 4,
+        "token_id": "13949186"
+    },
+    {
+        "id": "1357268112110981122",
+        "handle": "free_electron0",
+        "name": "Free",
+        "stars": 2,
+        "rarity": 4,
+        "token_id": "13949178"
+    },
+    {
+        "id": "1416421769561378817",
+        "handle": "0xMakesy",
+        "name": "makesy \ud83d\udfe2",
+        "stars": 5,
+        "rarity": 4,
+        "token_id": "14719205"
+    }
+]

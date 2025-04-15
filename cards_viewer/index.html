@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFT Viewer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>NFT Collection Viewer</h1>
+
+        <div class="filter-controls">
+            <div class="filter-group">
+                <h3>Filters</h3>
+                <div class="filter-row">
+                    <label for="starsMin">Stars:</label>
+                    <input type="number" id="starsMin" placeholder="Min" min="1" max="8">
+                    <span>to</span>
+                    <input type="number" id="starsMax" placeholder="Max" min="1" max="8">
+                </div>
+
+                <div class="filter-row">
+                    <label for="raritySelect">Rarity:</label>
+                    <select id="raritySelect">
+                        <option value="">All</option>
+                        <option value="1">Legendary</option>
+                        <option value="2">Epic</option>
+                        <option value="3">Rare</option>
+                        <option value="4">Common</option>
+                    </select>
+                </div>
+
+                <div class="filter-row">
+                    <label for="searchHandle">Search Handle:</label>
+                    <input type="text" id="searchHandle" placeholder="Enter username">
+                </div>
+
+                <div class="filter-buttons">
+                    <button id="applyFilters">hi Filters</button>
+                    <button id="clearFilters">Clear All</button>
+                </div>
+            </div>
+        </div>
+
+        <<div class="controls">
+            <button id="showAll">Show All NFTs</button>
+            <select id="accountSelect">
+                <option value="">Select an account...</option>
+            </select>
+            <!-- Add this toggle button -->
+            <button id="toggleSort" class="sort-toggle">
+                Sort by Copies: Off
+            </button>
+    </div>
+
+
+    <div class="stats">
+        <p>Total NFTs: <span id="totalCount">0</span></p>
+        <p>Filtered NFTs: <span id="filteredCount">0</span></p>
+        <p>Unique Accounts: <span id="accountCount">0</span></p>
+    </div>
+
+    <div id="nftContainer" class="nft-grid"></div>
+    </div>
+    <div id="accountModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3 id="modalTitle">Accounts with this card</h3>
+            <div id="accountList"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

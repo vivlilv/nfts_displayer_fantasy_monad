@@ -21,6 +21,7 @@ In the Network tab, search for requests containing your wallet address.
 Click one of them and look for the Authorization header.
 
 Copy the token as shown below:
+
 ![Alt text](privy_id_token.png)
 
 
@@ -37,7 +38,9 @@ Edit
 python main.py
 4. Open the Card Viewer in Browser
 Make sure you have Five Server installed in VS Code.
+
 ![Alt text](five_server_install.png)
+
 
 Go to the cards_viewer/ folder.
 
